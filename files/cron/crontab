@@ -1,0 +1,15 @@
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,...
+# |  |  |  |  |
+# *  *  *  *  *  command to be executed
+
+*     *   *   *   *   /scripts/01_alive.sh     > /dev/null
+
+0     1   *   *   *   /scripts/03_mysqldump.sh  > /dev/null
+
+0     2   *   *   *   /scripts/04_clean.sh      > /dev/null
+
+# Don't remove the empty line at the end of this file. It is required to run the cron job
